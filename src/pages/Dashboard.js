@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useCurrentUser} from "../hooks/useCurrentUser";
 import { PassageUser } from '@passageidentity/passage-elements/passage-user';
 import {useNavigate} from "react-router-dom";
@@ -21,9 +21,8 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     const user = new PassageUser();
-    const signedOut = await user.signOut();
+    await user.signOut();
     navigate('/auth');
-    console.log({signedOut});
   }
 
   return (

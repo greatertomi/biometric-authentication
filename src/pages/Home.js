@@ -1,16 +1,12 @@
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import "@passageidentity/passage-auth";
 
-const Home = () => {
-  const navigate = useNavigate();
-
+const Auth = () => {
   return (
     <div>
-      This is the Home Page
-      <button onClick={() => navigate('/login')}>Login</button>
-      <button onClick={() => navigate('/register')}>Register</button>
+      <passage-auth app-id={process.env.REACT_APP_PASSAGE_APP_ID}></passage-auth>
     </div>
   );
 };
 
-export default Home;
+export default Auth;
