@@ -1,9 +1,10 @@
 import React from 'react';
+import "@passageidentity/passage-auth";
 
 const Auth = () => {
   return (
     <div>
-      This is the Auth Page
+      <passage-auth app-id={process.env.REACT_APP_PASSAGE_APP_ID}></passage-auth>
     </div>
   );
 };
