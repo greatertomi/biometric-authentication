@@ -22,7 +22,7 @@ const Dashboard = () => {
   const handleLogout = async () => {
     const user = new PassageUser();
     await user.signOut();
-    navigate('/auth');
+    navigate('/');
   }
 
   return (
